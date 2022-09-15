@@ -35,10 +35,12 @@ namespace Sanalogi.Api
 
             services.AddControllers();
 
-            services.AddDbContext<DataContext>(options =>
-            {
-                options.UseSqlServer(Configuration["ConnectionStrings:Conn"]);
-            });
+            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("SanalogiApi"));
+
+            //services.AddDbContext<DataContext>(options =>
+            //{
+            //    options.UseSqlServer(Configuration["ConnectionStrings:Conn"]);
+            //});
 
             services.AddTransient<IOrderService, OrderService>();
 
