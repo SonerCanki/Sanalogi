@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{2A7D3C60-5199-4CE2-9BD2-116354D5D4A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presantation", "Presantation", "{A908F751-ADC0-45A6-A1C1-8C56AA2D8F5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sanalogi.Core", "Library\Sanalogi.Web\Sanalogi.Core.csproj", "{22AB2561-1355-43DF-88B6-E221004B519B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sanalogi.Data", "Library\Sanalogi.Data\Sanalogi.Data.csproj", "{788FC2F8-2978-4E0D-8E9F-C38065110FCB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sanalogi.Service", "Library\Sanalogi.Service\Sanalogi.Service.csproj", "{06E91CBA-555E-485F-8128-3D987A220FD2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sanalogi.Api", "Presentation\Sanalogi.Api\Sanalogi.Api.csproj", "{9607E783-8484-4ED1-A103-46ECD57BEEB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sanalogi.UI", "Presentation\Sanalogi.UI\Sanalogi.UI.csproj", "{CE4C29C6-390F-4D6A-ACA7-4DF61BC42EF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22AB2561-1355-43DF-88B6-E221004B519B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22AB2561-1355-43DF-88B6-E221004B519B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22AB2561-1355-43DF-88B6-E221004B519B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22AB2561-1355-43DF-88B6-E221004B519B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{788FC2F8-2978-4E0D-8E9F-C38065110FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{788FC2F8-2978-4E0D-8E9F-C38065110FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{788FC2F8-2978-4E0D-8E9F-C38065110FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{788FC2F8-2978-4E0D-8E9F-C38065110FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E91CBA-555E-485F-8128-3D987A220FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E91CBA-555E-485F-8128-3D987A220FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E91CBA-555E-485F-8128-3D987A220FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E91CBA-555E-485F-8128-3D987A220FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9607E783-8484-4ED1-A103-46ECD57BEEB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9607E783-8484-4ED1-A103-46ECD57BEEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9607E783-8484-4ED1-A103-46ECD57BEEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9607E783-8484-4ED1-A103-46ECD57BEEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE4C29C6-390F-4D6A-ACA7-4DF61BC42EF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE4C29C6-390F-4D6A-ACA7-4DF61BC42EF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE4C29C6-390F-4D6A-ACA7-4DF61BC42EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE4C29C6-390F-4D6A-ACA7-4DF61BC42EF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{22AB2561-1355-43DF-88B6-E221004B519B} = {2A7D3C60-5199-4CE2-9BD2-116354D5D4A9}
+		{788FC2F8-2978-4E0D-8E9F-C38065110FCB} = {2A7D3C60-5199-4CE2-9BD2-116354D5D4A9}
+		{06E91CBA-555E-485F-8128-3D987A220FD2} = {2A7D3C60-5199-4CE2-9BD2-116354D5D4A9}
+		{9607E783-8484-4ED1-A103-46ECD57BEEB7} = {A908F751-ADC0-45A6-A1C1-8C56AA2D8F5E}
+		{CE4C29C6-390F-4D6A-ACA7-4DF61BC42EF9} = {A908F751-ADC0-45A6-A1C1-8C56AA2D8F5E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3BBC95A-177D-44E6-9103-A31E3552935E}
+	EndGlobalSection
+EndGlobal

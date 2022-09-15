@@ -1,0 +1,106 @@
+﻿@using Sanalogi.UI.Models
+@model OrderModel
+
+<div class="card card-primary">
+
+    <div class="card-header">
+        <h3 class="card-title">Quick Example</h3>
+    </div>
+
+    <form asp-action="Create" asp-controller="Order">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Date:</label>
+                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                            <input asp-for="OrderDate" type="text" class="form-control datetimepicker-input" data-target="#reservationdate">
+                            <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Sipariş Veren Firma</label>
+                        <select asp-for="OrderingCompany" class="form-control select2 select2-hidden-accessible" style="width:100%">
+                            <option value="Sanalogi 1">Sanalogi 1</option>
+                            <option value="Sanalogi 2">Sanalogi 2</option>
+                            <option value="Sanalogi 3">Sanalogi 3</option>
+                            <option value="Sanalogi 4">Sanalogi 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label>Ürün Adı</label>
+                    <input asp-for="OrderName" type="text" class="form-control">
+                </div>
+                <div class="col-6">
+                    <label>Ürün Adedi</label>
+                    <input asp-for="Quantity" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tutar</label>
+                <input asp-for="Price" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    @if (TempData["Message"] != null)
+    {
+<div class="alert alert-danger" role="alert">
+    @TempData["Message"]
+</div>}
+</div>
+
+@await Component.InvokeAsync("Orders")
+
+
+<script type="text/javascript">
+
+    $("#update").on("click",function () {
+        $.ajax({
+            url: "order/?id=" + $('#update').attr("id"),
+            dataType: 'application/json',
+            complete: function (data) {
+                alert(data)
+            },
+        });
+    });
+
+    $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        })
+
+        //Datemask dd/mm/yyyy
+        $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+        //Datemask2 mm/dd/yyyy
+        $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+        //Money Euro
+        $('[data-mask]').inputmask()
+
+        //Date picker
+        $('#reservationdate').datetimepicker({
+            format: 'L',
+            dateFormat: 'dd:mm:yyyy'
+        });
+
+        //Date and time picker
+        $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+
+        //Date range picker
+        $('#reservation').daterangepicker()
+
+    })
+</script>
